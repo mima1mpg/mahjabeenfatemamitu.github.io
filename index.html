@@ -1,0 +1,1672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahjabeen Fatema Mitu, Ph.D. — Hydrologic & Hydroclimate Researcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0d1117;
+    --bg-surface: #161b22;
+    --bg-card: #1a2130;
+    --border: rgba(99,179,237,0.12);
+    --border-accent: rgba(99,179,237,0.3);
+    --text-primary: #e6edf3;
+    --text-secondary: #8b949e;
+    --text-muted: #545d68;
+    --accent: #63b3ed;
+    --accent-soft: rgba(99,179,237,0.08);
+    --accent-glow: rgba(99,179,237,0.15);
+    --teal: #4ecdc4;
+    --teal-soft: rgba(78,205,196,0.08);
+    --amber: #f6ad55;
+    --amber-soft: rgba(246,173,85,0.08);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--bg);
+    color: var(--text-primary);
+    line-height: 1.7;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(13,17,23,0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 15px;
+    color: var(--accent);
+    letter-spacing: 0.02em;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 7rem 2rem 4rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    gap: 4rem;
+    justify-content: space-between;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(99,179,237,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content { max-width: 620px; flex: 1; }
+
+  .hero-photo {
+    flex-shrink: 0;
+    width: 260px;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--border-accent);
+    position: relative;
+    box-shadow: 0 0 60px rgba(99,179,237,0.08);
+  }
+
+  .hero-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-photo::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 16px;
+    border: 1px solid rgba(99,179,237,0.2);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--accent);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 600;
+    line-height: 1.1;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .hero-title-italic {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--accent);
+  }
+
+  .hero-tagline {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    color: var(--text-secondary);
+    margin: 1.5rem 0 2.5rem;
+    font-weight: 300;
+    max-width: 580px;
+    line-height: 1.8;
+  }
+
+  .hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .badge {
+    font-size: 12px;
+    font-family: var(--font-mono);
+    padding: 4px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border-accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+    letter-spacing: 0.03em;
+  }
+
+  .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    background: var(--accent);
+    color: #0d1117;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-primary:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    border: 1px solid var(--border-accent);
+    color: var(--accent);
+    background: transparent;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    letter-spacing: 0.02em;
+  }
+
+  .btn-secondary:hover { background: var(--accent-soft); transform: translateY(-1px); }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+
+  h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    line-height: 1.2;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    margin: 0;
+  }
+
+  /* STATS ROW */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: border-color 0.2s;
+  }
+
+  .stat-card:hover { border-color: var(--border-accent); }
+
+  .stat-number {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--accent);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+
+  .stat-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-text p {
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+    line-height: 1.85;
+    font-size: 15.5px;
+  }
+
+  .about-interests h3 {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .interest-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .interest-list li {
+    font-size: 14px;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .interest-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+  }
+
+  /* EXPERIENCE */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .timeline-item {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+
+  .timeline-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .timeline-date {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--text-muted);
+    padding-top: 4px;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+  }
+
+  .timeline-org {
+    font-size: 12px;
+    color: var(--accent);
+    margin-top: 4px;
+    font-weight: 400;
+  }
+
+  .timeline-content h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-content .location {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-content p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.75rem;
+  }
+
+  .tag {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    padding: 3px 9px;
+    border-radius: 4px;
+    background: var(--teal-soft);
+    color: var(--teal);
+    border: 1px solid rgba(78,205,196,0.2);
+    letter-spacing: 0.03em;
+  }
+
+  /* PUBLICATIONS */
+  .pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pub-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem 1.75rem;
+    transition: border-color 0.2s, transform 0.15s;
+    position: relative;
+  }
+
+  .pub-card:hover { border-color: var(--border-accent); transform: translateX(4px); }
+
+  .pub-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 1.5rem; bottom: 1.5rem;
+    width: 3px;
+    background: var(--accent);
+    border-radius: 0 2px 2px 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .pub-card:hover::before { opacity: 1; }
+
+  .pub-year {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+  }
+
+  .pub-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-card .journal {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-card .authors {
+    font-size: 12.5px;
+    color: var(--text-secondary);
+  }
+
+  .pub-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    margin-top: 0.75rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+
+  .pub-link:hover { opacity: 1; }
+
+  .pub-status {
+    display: inline-block;
+    font-size: 11px;
+    font-family: var(--font-mono);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+  }
+
+  .pub-status.review {
+    background: var(--amber-soft);
+    color: var(--amber);
+    border: 1px solid rgba(246,173,85,0.2);
+  }
+
+  .pub-status.prep {
+    background: rgba(78,205,196,0.08);
+    color: var(--teal);
+    border: 1px solid rgba(78,205,196,0.2);
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .skill-category {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .skill-category:hover { border-color: var(--border-accent); }
+
+  .skill-category h3 {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+
+  .skill-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+
+  .skill-items li {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    padding-left: 0.75rem;
+    position: relative;
+  }
+
+  .skill-items li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* AWARDS */
+  .awards-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .award-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.2s;
+  }
+
+  .award-item:hover { border-color: var(--border-accent); }
+
+  .award-year {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    white-space: nowrap;
+    padding-top: 2px;
+    min-width: 36px;
+  }
+
+  .award-text {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  /* CONTACT */
+  .contact-section {
+    background: var(--bg-surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 6rem 2rem;
+  }
+
+  .contact-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .contact-left h2 {
+    margin-bottom: 1rem;
+  }
+
+  .contact-left p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 14px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+
+  .contact-link:hover { color: var(--accent); }
+
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+    background: var(--bg-card);
+    transition: border-color 0.2s;
+  }
+
+  .contact-link:hover .contact-icon { border-color: var(--accent); color: var(--accent); }
+
+  /* EDUCATION */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .edu-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .edu-card:hover { border-color: var(--border-accent); }
+
+  .edu-degree {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-field {
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+  }
+
+  .edu-school {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+  }
+
+  .edu-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer p {
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .memberships {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .member-badge {
+    font-size: 11px;
+    font-family: var(--font-mono);
+    padding: 3px 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text-muted);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .project-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.75rem;
+    transition: border-color 0.2s, transform 0.15s;
+  }
+
+  .project-card:hover { border-color: var(--border-accent); transform: translateY(-2px); }
+
+  .project-featured {
+    grid-column: 1 / -1;
+    border-color: rgba(99,179,237,0.25);
+    background: linear-gradient(135deg, #1a2130 0%, #151d2a 100%);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-tag {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.05em;
+  }
+
+  .tag-current { background: rgba(99,179,237,0.15); color: var(--accent); border: 1px solid rgba(99,179,237,0.3); }
+  .tag-ml { background: rgba(159,122,234,0.12); color: #b794f4; border: 1px solid rgba(159,122,234,0.25); }
+  .tag-water { background: rgba(72,187,120,0.1); color: #68d391; border: 1px solid rgba(72,187,120,0.25); }
+  .tag-rs { background: rgba(246,173,85,0.1); color: var(--amber); border: 1px solid rgba(246,173,85,0.25); }
+  .tag-gis { background: rgba(78,205,196,0.1); color: var(--teal); border: 1px solid rgba(78,205,196,0.25); }
+
+  .project-year {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+
+  .project-card h3 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+  }
+
+  .project-org {
+    font-size: 12.5px;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    opacity: 0.8;
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+  }
+
+  .project-desc {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .project-featured { grid-column: 1; }
+  }
+
+  /* CONFERENCES */
+  .conf-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .conf-item {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid var(--border);
+    align-items: start;
+    transition: background 0.15s;
+  }
+
+  .conf-item:last-child { border-bottom: 1px solid var(--border); }
+
+  .conf-item.conf-hidden { display: none; }
+
+  .conf-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .conf-year {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  .conf-venue {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-family: var(--font-mono);
+  }
+
+  .conf-title {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    padding-top: 2px;
+  }
+
+  .conf-toggle {
+    margin-top: 1.5rem;
+    background: transparent;
+    border: 1px solid var(--border-accent);
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: background 0.2s;
+  }
+
+  .conf-toggle:hover { background: var(--accent-soft); }
+
+  /* LEADERSHIP */
+  .leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .lead-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    transition: border-color 0.2s;
+  }
+
+  .lead-card:hover { border-color: var(--border-accent); }
+
+  .lead-role {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+  }
+
+  .lead-org {
+    font-size: 13px;
+    color: var(--accent);
+    margin-bottom: 0.2rem;
+  }
+
+  .lead-date {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.03em;
+  }
+
+  .lead-desc {
+    font-size: 13.5px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .hero-eyebrow { animation-delay: 0.1s; }
+  h1 { animation-delay: 0.2s; }
+  .hero-tagline { animation-delay: 0.3s; }
+  .hero-badges { animation-delay: 0.4s; }
+  .hero-cta { animation-delay: 0.5s; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    section { padding: 4rem 1.25rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+    .awards-list { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    footer { flex-direction: column; gap: 1rem; text-align: center; }
+    .hero { padding: 6rem 1.25rem 3rem; flex-direction: column-reverse; gap: 2rem; }
+    .hero-photo { width: 140px; height: 170px; align-self: center; }
+    .conf-item { grid-template-columns: 1fr; gap: 0.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">M. F. Mitu</span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#conferences">Conferences</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <p class="hero-eyebrow">Postdoctoral Research Associate · UConn</p>
+    <h1>Mahjabeen Fatema <span class="hero-title-italic">Mitu</span>, Ph.D.</h1>
+    <p class="hero-tagline">
+      Hydrologic and hydroclimate researcher specializing in compound flood hazards, hydrodynamic modeling, and large-scale environmental data analysis — bridging physics-based simulation with machine learning for climate resilience.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">Compound Flooding</span>
+      <span class="badge">HEC-RAS / HEC-HMS</span>
+      <span class="badge">Remote Sensing</span>
+      <span class="badge">Python · R · MATLAB</span>
+      <span class="badge">CMIP6 · ERA5</span>
+      <span class="badge">Google Earth Engine</span>
+    </div>
+    <div class="hero-cta">
+      <a href="mailto:mahjabeen.fatema.mitu@gmail.com" class="btn-primary">Get in touch →</a>
+      <a href="https://linkedin.com/in/mahjabeenfatemamitu" target="_blank" class="btn-secondary">LinkedIn ↗</a>
+    </div>
+  </div>
+  <div class="hero-photo">
+    <img src="data:image/jpeg;base64,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" alt="Mahjabeen Fatema Mitu">
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- STATS -->
+<section>
+  <div class="stats-row" id="statsRow">
+    <div class="stat-card">
+      <span class="stat-number" data-target="3" data-suffix="">3</span>
+      <span class="stat-label">Journal Publications</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" data-target="14" data-suffix="+">14+</span>
+      <span class="stat-label">Conference Presentations</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" data-target="20" data-suffix="+">20+</span>
+      <span class="stat-label">Manuscripts Reviewed</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" data-target="5" data-suffix="+">5+</span>
+      <span class="stat-label">Years at UConn</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number" data-target="5" data-suffix="">5</span>
+      <span class="stat-label">Society Memberships</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <p class="section-label">// about</p>
+  <h2>Research Overview</h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>
+        I am a Postdoctoral Research Associate at the University of Connecticut's Institute of Environment and Energy (Eversource Energy Center), where I work on the DOE-funded project <em>Energy System Planning for Resilience during Severe Weather (ESPRS)</em> — a multi-laboratory collaboration with NREL, ORNL, LANL, EPRI, and CUNY.
+      </p>
+      <p>
+        My research focuses on translating downscaled Earth System Model outputs into basin-scale hydrologic inputs, generating climate-adjusted return period peak flows, and conducting 2D HEC-RAS flood inundation modeling to quantify changes in flood extent under historical and mid-century climate scenarios.
+      </p>
+      <p>
+        During my Ph.D. at UConn, I developed and validated physics-based models to identify infrastructure hotspots — particularly power grid substations — at risk from compound storm-surge and rainfall flooding. I also integrated socio-demographic indicators to assess community-level flood vulnerability and resilience across the U.S. coastal zone.
+      </p>
+      <p>
+        Prior to that, I interned at Lawrence Livermore National Laboratory's Atmospheric, Earth & Energy Division, where I developed 2D hydrodynamic flood simulations for riverine systems and analyzed topoclimatic drivers of flood extent variability for climate-resilient infrastructure planning.
+      </p>
+    </div>
+    <div class="about-interests">
+      <h3>Research Interests</h3>
+      <ul class="interest-list">
+        <li>Hydroclimate extremes & compound flooding</li>
+        <li>Remote sensing & environmental data analysis</li>
+        <li>Machine learning for environmental systems</li>
+        <li>Flood hazards & hydrodynamic modeling</li>
+        <li>Climate resilience & hydroclimate applications</li>
+        <li>Socio-demographic flood vulnerability</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EDUCATION -->
+<section id="education">
+  <p class="section-label">// education</p>
+  <h2>Academic Background</h2>
+  <div class="edu-grid">
+    <div class="edu-card">
+      <div class="edu-degree">Doctor of Philosophy</div>
+      <div class="edu-field">Environmental Engineering</div>
+      <div class="edu-school">University of Connecticut, Storrs, CT, USA</div>
+      <div class="edu-meta">December 2025 &nbsp;·&nbsp; GPA: 4.00 / 4.00</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">Master of Science</div>
+      <div class="edu-field">Photogrammetry & Geoinformatics</div>
+      <div class="edu-school">University of Applied Sciences Stuttgart, Germany</div>
+      <div class="edu-meta">December 2016</div>
+    </div>
+    <div class="edu-card">
+      <div class="edu-degree">Bachelor of Science</div>
+      <div class="edu-field">Water Resources Engineering</div>
+      <div class="edu-school">Bangladesh University of Engineering & Technology, Dhaka</div>
+      <div class="edu-meta">January 2012</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label">// experience</p>
+  <h2>Professional Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Feb 2026 – Present
+        <div class="timeline-org">UConn · IoEE</div>
+      </div>
+      <div class="timeline-content">
+        <h3>Postdoctoral Research Associate</h3>
+        <div class="location">University of Connecticut, Storrs, CT</div>
+        <p>DOE ESPRS project — multi-lab collaboration (NREL, ORNL, LANL, EPRI, CUNY). Translating downscaled Earth System Model outputs into basin-scale hydrologic inputs; generating climate-adjusted return period peak flows; conducting 2D HEC-RAS flood inundation modeling; quantifying flood extent changes under historical and mid-century scenarios to inform energy system resilience.</p>
+        <div class="timeline-tags">
+          <span class="tag">HEC-RAS 2D</span>
+          <span class="tag">CMIP6</span>
+          <span class="tag">Flood Inundation</span>
+          <span class="tag">Climate Scenarios</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        May – Aug 2025
+        <div class="timeline-org">LLNL · AEED</div>
+      </div>
+      <div class="timeline-content">
+        <h3>Graduate Student Intern</h3>
+        <div class="location">Lawrence Livermore National Laboratory, Livermore, CA</div>
+        <p>Developed and implemented 2D hydrodynamic flood simulations for riverine systems including applications in Sonoma County, California; analyzed topographic and hydroclimatic drivers of flood extent variability; integrated satellite-derived precipitation (IMERG) and atmospheric forcing (AORC) datasets for flood hazard and hydroclimate analysis to support climate-resilient infrastructure planning.</p>
+        <div class="timeline-tags">
+          <span class="tag">IMERG</span>
+          <span class="tag">AORC</span>
+          <span class="tag">Infrastructure Exposure</span>
+          <span class="tag">Water–Energy</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-date">
+        Aug 2019 – Jan 2026
+        <div class="timeline-org">UConn · CEE</div>
+      </div>
+      <div class="timeline-content">
+        <h3>Graduate Research Assistant</h3>
+        <div class="location">Hydrometeorology & Hydrologic Remote Sensing Group, UConn</div>
+        <p>Dissertation: <em>Analyzing Compound Flood Risk and Social Vulnerabilities in Coastal CONUS</em>. Developed physics-based compound flood index for power grid substations, revealing that over 40% of vulnerable areas are omitted by standard flood maps (SLOSH, FEMA 100-year); analyzed 2M+ flood insurance claims to assess risk patterns and inequities; integrated socio-demographic indicators for community-level vulnerability and resilience assessment. Also contributed to Saudi Arabia nationwide flood forecasting system and Eversource Energy substation vulnerability assessments.</p>
+        <div class="timeline-tags">
+          <span class="tag">Compound Flooding</span>
+          <span class="tag">HEC-RAS</span>
+          <span class="tag">Social Vulnerability</span>
+          <span class="tag">FEMA / SLOSH</span>
+          <span class="tag">Geostatistics</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PUBLICATIONS -->
+<section id="publications">
+  <p class="section-label">// publications</p>
+  <h2>Journal Articles</h2>
+  <div class="pub-list">
+
+    <div class="pub-card">
+      <div class="pub-year">2025</div>
+      <h3>Using Flood Insurance Claims in Coastal CONUS to Evaluate the Impact of Compound Flood Risk</h3>
+      <div class="journal">Water Resources Research, 61(8)</div>
+      <div class="authors">Mitu, M.F., Sofia, G., Anagnostou, E.N.</div>
+      <a href="https://doi.org/10.1029/2024WR039384" target="_blank" class="pub-link">doi: 10.1029/2024WR039384 ↗</a>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-year">2024</div>
+      <h3>A Nationwide Flood Forecasting System for Saudi Arabia: Insights from the Jeddah 2022 Event</h3>
+      <div class="journal">Water (Switzerland), 16(14)</div>
+      <div class="authors">Sofia, G., Yang, Q., Shen, X., Mitu, M.F., et al.</div>
+      <a href="https://doi.org/10.3390/w16141939" target="_blank" class="pub-link">doi: 10.3390/w16141939 ↗</a>
+    </div>
+
+    <div class="pub-card">
+      <div class="pub-year">2023</div>
+      <h3>Assessing the Compound Flood Risk in Coastal Areas: Framework Formulation and Demonstration</h3>
+      <div class="journal">Journal of Hydrology, 626</div>
+      <div class="authors">Mitu, M.F., Sofia, G., Shen, X., Anagnostou, E.N.</div>
+      <a href="https://doi.org/10.1016/j.jhydrol.2023.130278" target="_blank" class="pub-link">doi: 10.1016/j.jhydrol.2023.130278 ↗</a>
+    </div>
+
+    <div class="pub-card">
+      <span class="pub-status review">Under Review</span>
+      <h3>Does Increased Flood Risk from Compounding Coastal Storm Hazards Amplify Social Inequalities?</h3>
+      <div class="journal">Communications Earth & Environment</div>
+      <div class="authors">Mitu, M.F., Sofia, G., Ouimet, E.S., Anagnostou, E.N.</div>
+    </div>
+
+    <div class="pub-card">
+      <span class="pub-status prep">In Preparation</span>
+      <h3>Multi-Model Comparison of Atmospheric River Flood Simulations in the Russian River Basin</h3>
+      <div class="journal">Hydrology and Earth System Sciences</div>
+      <div class="authors">Wu, W.-Y., Lazin, R., Duan, S., Mitu, M.F., Ullrich, P., Bonfils, C., et al.</div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SKILLS -->
+<section id="skills">
+  <p class="section-label">// skills</p>
+  <h2>Technical Expertise</h2>
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h3>Programming</h3>
+      <ul class="skill-items">
+        <li>Python (scientific computing)</li>
+        <li>R (statistical modeling)</li>
+        <li>MATLAB</li>
+        <li>Java</li>
+        <li>LaTeX</li>
+        <li>HPC / Linux workflows</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Hydrologic Modeling</h3>
+      <ul class="skill-items">
+        <li>HEC-RAS (1D & 2D)</li>
+        <li>HEC-HMS</li>
+        <li>HEC-DSSVue</li>
+        <li>HEC-ResSim / HEC-SSP</li>
+        <li>CREST-SVAS</li>
+        <li>CROPWAT / MODFLOW</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>GIS & Remote Sensing</h3>
+      <ul class="skill-items">
+        <li>ArcGIS Pro / ArcMap</li>
+        <li>QGIS / ArcHydro</li>
+        <li>Google Earth Engine</li>
+        <li>NetCDF & geospatial analysis</li>
+        <li>DEM processing</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Machine Learning</h3>
+      <ul class="skill-items">
+        <li>TensorFlow (deep learning)</li>
+        <li>scikit-learn (ML pipelines)</li>
+        <li>xarray / pandas</li>
+        <li>Random Forest, ARIMA</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Climate Data</h3>
+      <ul class="skill-items">
+        <li>CMIP6 model outputs</li>
+        <li>ERA5 reanalysis</li>
+        <li>IMERG precipitation</li>
+        <li>AORC atmospheric forcing</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>CAD & Engineering Tools</h3>
+      <ul class="skill-items">
+        <li>AutoCAD (basic drawings)</li>
+        <li>WaterCAD / WaterGEMS</li>
+        <li>StormCAD / Flowmaster</li>
+        <li>PE licensure eligible</li>
+      </ul>
+    </div>
+    <div class="skill-category">
+      <h3>Languages</h3>
+      <ul class="skill-items">
+        <li>English — Fluent</li>
+        <li>Bengali — Native</li>
+        <li>German — Professional</li>
+        <li>Spanish — Elementary</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- AWARDS -->
+<section id="awards">
+  <p class="section-label">// awards</p>
+  <h2>Honors & Awards</h2>
+  <div class="awards-list">
+    <div class="award-item">
+      <div class="award-year">2025</div>
+      <div class="award-text">Graduate Student Leadership Fellowship, Civil & Environmental Engineering, UConn</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2025</div>
+      <div class="award-text">Best in Show Presentation, PLS Student Showcase, Lawrence Livermore National Laboratory</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2025</div>
+      <div class="award-text">Summer Doctoral Dissertation Fellowship, The Graduate School, UConn</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2025</div>
+      <div class="award-text">Eversource Energy Center Graduate Fellowship, UConn</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2024</div>
+      <div class="award-text">Conference Travel Award, John Lof Leadership Academy, UConn</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2023</div>
+      <div class="award-text">Eversource Energy Center Graduate Fellowship, UConn</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2022</div>
+      <div class="award-text">Predoctoral Fellowship, Civil & Environmental Engineering, UConn</div>
+    </div>
+    <div class="award-item">
+      <div class="award-year">2014–16</div>
+      <div class="award-text">Scholarship, Breuning Foundation — Association of Friends of HfT Stuttgart; DAAD support grant</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONFERENCES -->
+<section id="conferences">
+  <p class="section-label">// conferences</p>
+  <h2>Conference Presentations</h2>
+  <p style="font-size:14px;color:var(--text-muted);margin-bottom:2rem;font-family:var(--font-mono);">14 presentations at AGU, AMS, EGU, and LLNL — 2020 to 2026</p>
+
+  <div class="conf-list" id="confList">
+    <div class="conf-item">
+      <div class="conf-meta"><span class="conf-year">2026</span><span class="conf-venue">AMS · Houston, TX</span></div>
+      <div class="conf-title">Integrating Physical and Social Dimensions of Compound Flood Risk in United States Coastal Regions</div>
+    </div>
+    <div class="conf-item">
+      <div class="conf-meta"><span class="conf-year">2025</span><span class="conf-venue">AGU · New Orleans, LA</span></div>
+      <div class="conf-title">Intersecting Social Vulnerability and Compound Flooding in Coastal U.S. Communities</div>
+    </div>
+    <div class="conf-item">
+      <div class="conf-meta"><span class="conf-year">2025</span><span class="conf-venue">AGU · New Orleans, LA</span></div>
+      <div class="conf-title">Advancing Flood Hazard Modeling Across Diverse Storm Types Using 2D Hydrodynamics and Remote Sensing Precipitation</div>
+    </div>
+    <div class="conf-item">
+      <div class="conf-meta"><span class="conf-year">2025</span><span class="conf-venue">LLNL · Livermore, CA</span></div>
+      <div class="conf-title">River to Floodplain: Uncovering Flood Hazards with 2D HEC-RAS Modeling — Climate & Weather Seminar Series</div>
+    </div>
+    <div class="conf-item">
+      <div class="conf-meta"><span class="conf-year">2025</span><span class="conf-venue">LLNL · Livermore, CA</span></div>
+      <div class="conf-title">Water Rising: A HEC-RAS-Based Hydrodynamic Simulation of the February 2019 Russian River Flood — PLS Student Poster Symposium</div>
+    </div>
+    <div class="conf-item conf-hidden" id="confExtra">
+    </div>
+  </div>
+
+  <div class="conf-list" id="confExtra">
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2025</span><span class="conf-venue">AMS · New Orleans, LA</span></div>
+      <div class="conf-title">Utilizing Flood Insurance Claims in Coastal CONUS to Assess the Impact of Compound Flood Risks</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2024</span><span class="conf-venue">AGU · Washington, D.C.</span></div>
+      <div class="conf-title">Comprehensive Study on Compound Flood Hazards Fostering Sociodemographic Vulnerability in the U.S.</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2024</span><span class="conf-venue">EGU · Vienna, Austria</span></div>
+      <div class="conf-title">Translating Flood Insurance Claims in the Coastal CONUS within the Spectrum of Compound Flood Risk</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2023</span><span class="conf-venue">AGU · San Francisco, CA</span></div>
+      <div class="conf-title">Flood Insurance in the US: Analyzing Claims in the Context of Compound Flood Risk</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2023</span><span class="conf-venue">EGU · Vienna, Austria</span></div>
+      <div class="conf-title">Assessing the Compound Flooding Risk and Impacts across the Coastal Areas of the United States</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2022</span><span class="conf-venue">AGU · Chicago, IL</span></div>
+      <div class="conf-title">An Assessment of Compound Flooding Impacts across the East Coast, USA</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2021</span><span class="conf-venue">AGU · New Orleans, LA</span></div>
+      <div class="conf-title">A Framework to Assess the Compound Flood Risk in Coastal Areas</div>
+    </div>
+    <div class="conf-item conf-hidden">
+      <div class="conf-meta"><span class="conf-year">2020</span><span class="conf-venue">AGU · Online</span></div>
+      <div class="conf-title">An Integrated Framework to Assess Compound Flood Potential in Coastal Areas: Concurrence of River Discharge and Storm Surge Extremes</div>
+    </div>
+  </div>
+
+  <button class="conf-toggle" id="confToggle" onclick="toggleConf()">Show all 14 presentations ↓</button>
+</section>
+
+<!-- PROJECTS -->
+<div class="divider"></div>
+<section id="projects">
+  <p class="section-label">// selected projects</p>
+  <h2>Selected Projects</h2>
+  <div class="projects-grid">
+
+    <div class="project-card project-featured">
+      <div class="project-header">
+        <span class="project-tag tag-current">Current</span>
+        <span class="project-year">2026 – Present</span>
+      </div>
+      <h3>Energy System Planning for Resilience during Severe Weather (ESPRS)</h3>
+      <p class="project-org">DOE Project · UConn Eversource Energy Center · Multi-lab: NREL, ORNL, LANL, EPRI, CUNY</p>
+      <p class="project-desc">Translating downscaled Earth System Model outputs into basin-scale hydrologic inputs; generating climate-adjusted return period peak flows; conducting 2D HEC-RAS flood inundation modeling to quantify flood extent changes under historical and mid-century scenarios to inform river basin operations and energy system resilience.</p>
+      <div class="project-tags">
+        <span class="tag">HEC-RAS 2D</span>
+        <span class="tag">CMIP6</span>
+        <span class="tag">Climate Scenarios</span>
+        <span class="tag">Energy Resilience</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-tag tag-ml">Machine Learning</span>
+        <span class="project-year">2020</span>
+      </div>
+      <h3>ML Classification of Marine Mammal Presence via Underwater Passive Acoustic Listeners</h3>
+      <p class="project-org">ENVE 5331 · UConn · Collaboration with National Technical University of Athens</p>
+      <p class="project-desc">Developed Random Forest binary classifiers in Python (scikit-learn) for 92,154-row acoustic dataset from the North Aegean Trough. Applied GridSearchCV and cross-validation, achieving 99.18% accuracy in classifying sperm whale presence from ambient ocean noise across 64 frequency bins.</p>
+      <div class="project-tags">
+        <span class="tag">Random Forest</span>
+        <span class="tag">scikit-learn</span>
+        <span class="tag">GridSearchCV</span>
+        <span class="tag">Acoustic Data</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-tag tag-water">Water Quality</span>
+        <span class="project-year">2020</span>
+      </div>
+      <h3>Remediation of PCE Contamination in Groundwater</h3>
+      <p class="project-org">ENVE 5210 Environmental Engineering Chemistry · UConn</p>
+      <p class="project-desc">Comprehensive analysis of perchloroethylene (PCE) contamination pathways, fate and transport as DNAPLs in groundwater, and remediation technologies including packed tower aeration, granular activated carbon (GAC), and zero-valent iron nanoparticles (nZVI) achieving up to 99.9% PCE removal efficiency.</p>
+      <div class="project-tags">
+        <span class="tag">Groundwater</span>
+        <span class="tag">DNAPL</span>
+        <span class="tag">GAC</span>
+        <span class="tag">nZVI</span>
+        <span class="tag">Water Quality</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-tag tag-rs">Remote Sensing</span>
+        <span class="project-year">Feb – Mar 2015</span>
+      </div>
+      <h3>Automatic DTM/DSM Generation and Laser Data Filtering</h3>
+      <p class="project-org">HfT Stuttgart · Collaboration with LIMES Lab & Trimble Geospatial GmbH</p>
+      <p class="project-desc">Automated aerial triangulation and digital terrain model (DTM) generation using MATCH-AT and DTMaster. Laser data filtering and editing with SCOP++ and semi-automatic feature extraction from images and point clouds using InJECT and Building Generator.</p>
+      <div class="project-tags">
+        <span class="tag">DTM/DSM</span>
+        <span class="tag">MATCH-AT</span>
+        <span class="tag">LiDAR</span>
+        <span class="tag">Point Clouds</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-tag tag-rs">Remote Sensing</span>
+        <span class="project-year">Mar – Jun 2014</span>
+      </div>
+      <h3>Extraction of Elongated Vertical Objects from Laser Point Clouds</h3>
+      <p class="project-org">Remote Sensing Studio · HfT Stuttgart · Engineering Measurement Techniques Lab</p>
+      <p class="project-desc">Designed point features using Eigenvalue analysis for detecting and distinguishing vertical linear structures (e.g. streetscape poles) in mobile laser scan data. Computations performed within the SAGA/LIS Geographic Information System framework.</p>
+      <div class="project-tags">
+        <span class="tag">Eigenvalue Analysis</span>
+        <span class="tag">Mobile LiDAR</span>
+        <span class="tag">SAGA/LIS</span>
+        <span class="tag">GIS</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-header">
+        <span class="project-tag tag-gis">GIS</span>
+        <span class="project-year">Feb – Mar 2014</span>
+      </div>
+      <h3>Geographic Information System Studio — Hydrologic & 3D Analysis</h3>
+      <p class="project-org">GIS Studio · HfT Stuttgart · Geodetic Data Processing Lab</p>
+      <p class="project-desc">ArcGIS-based training covering density map visualization, hydrological analysis of a dam using DEM (viewshed and 3D visualization), suitability analysis for solar panels, and 3D city modeling (LOD 1) from LiDAR data.</p>
+      <div class="project-tags">
+        <span class="tag">ArcGIS</span>
+        <span class="tag">DEM</span>
+        <span class="tag">3D City Model</span>
+        <span class="tag">LiDAR</span>
+        <span class="tag">Solar Analysis</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LEADERSHIP -->
+<section id="leadership">
+  <p class="section-label">// leadership & service</p>
+  <h2>Leadership & Volunteer</h2>
+  <div class="leadership-grid">
+
+    <div class="lead-card">
+      <div class="lead-role">At-Large Senator</div>
+      <div class="lead-org">Graduate Student Senate (GSS) · UConn</div>
+      <div class="lead-date">Oct 2024 – May 2025</div>
+      <p class="lead-desc">Represented graduate student interests in university governance and policy discussions.</p>
+    </div>
+
+    <div class="lead-card">
+      <div class="lead-role">Treasurer</div>
+      <div class="lead-org">Graduate Society of Women Engineers (Grad SWE) · UConn</div>
+      <div class="lead-date">Jun 2024 – May 2025</div>
+      <p class="lead-desc">Managed chapter finances and supported programming for graduate women in engineering.</p>
+    </div>
+
+    <div class="lead-card">
+      <div class="lead-role">Social Media & Public Relations Director</div>
+      <div class="lead-org"><a href="https://jlla.engr.uconn.edu/meet-mahjabeen-fatema-mitu/" target="_blank" style="color:var(--accent);text-decoration:none;">John Lof Leadership Academy (JLLA)</a> · UConn</div>
+      <div class="lead-date">Dec 2022 – Jun 2024</div>
+      <p class="lead-desc">Led external communications and outreach strategy for UConn's engineering leadership program.</p>
+    </div>
+
+    <div class="lead-card">
+      <div class="lead-role">Vice President</div>
+      <div class="lead-org">Student Association of Graduate Engineers (SAGE) · UConn</div>
+      <div class="lead-date">May 2021 – Jun 2023</div>
+      <p class="lead-desc">Organized professional and community events for graduate engineering students.</p>
+    </div>
+
+    <div class="lead-card">
+      <div class="lead-role">International Student Support</div>
+      <div class="lead-org">International Student Office (ISO) · HfT Stuttgart</div>
+      <div class="lead-date">Aug 2014 – Apr 2017</div>
+      <p class="lead-desc">Supported student activities and integration initiatives for international students in Stuttgart.</p>
+    </div>
+
+    <div class="lead-card">
+      <div class="lead-role">Peer Reviewer</div>
+      <div class="lead-org">Journal of Hydrology · Water Resources Research · AGU Community Science</div>
+      <div class="lead-date">Mar 2021 – Present</div>
+      <p class="lead-desc">Reviewed 20+ manuscripts on flood hazards, hydroclimate extremes, ML applications, and social vulnerability.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="divider"></div>
+<div class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div class="contact-left">
+      <p class="section-label">// contact</p>
+      <h2>Let's Connect</h2>
+      <p>I am open to research collaborations, invited talks, and opportunities in hydroclimate modeling, flood risk assessment, and environmental data science. Feel free to reach out via email or LinkedIn.</p>
+      <div class="hero-cta">
+        <a href="mailto:mahjabeen.fatema.mitu@gmail.com" class="btn-primary">Send an email →</a>
+      </div>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:mahjabeen.fatema.mitu@gmail.com" class="contact-link">
+        <span class="contact-icon">✉</span>
+        mahjabeen.fatema.mitu@gmail.com
+      </a>
+      <a href="https://linkedin.com/in/mahjabeenfatemamitu" target="_blank" class="contact-link">
+        <span class="contact-icon">in</span>
+        linkedin.com/in/mahjabeenfatemamitu
+      </a>
+      <a href="https://scholar.google.com/citations?hl=en&user=owOU4RsAAAAJ" target="_blank" class="contact-link">
+        <span class="contact-icon" style="font-size:11px;font-weight:500;">GS</span>
+        Google Scholar
+      </a>
+      <a href="https://orcid.org/0000-0002-1506-0511" target="_blank" class="contact-link">
+        <span class="contact-icon" style="font-size:11px;font-weight:500;">iD</span>
+        ORCID: 0000-0002-1506-0511
+      </a>
+      <a href="https://www.researchgate.net/profile/Mahjabeen_Fatema_Mitu" target="_blank" class="contact-link">
+        <span class="contact-icon" style="font-size:11px;font-weight:500;">RG</span>
+        ResearchGate
+      </a>
+      <span class="contact-link" style="cursor: default;">
+        <span class="contact-icon">🏛</span>
+        US Permanent Resident · DOE PIV Eligible
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Mahjabeen Fatema Mitu, Ph.D.</p>
+  <div class="memberships">
+    <span class="member-badge">ASCE</span>
+    <span class="member-badge">AGU</span>
+    <span class="member-badge">AMS</span>
+    <span class="member-badge">EGU</span>
+    <span class="member-badge">SWE</span>
+  </div>
+</footer>
+
+<script>
+  var confExpanded = false;
+  function toggleConf() {
+    confExpanded = !confExpanded;
+    var hidden = document.querySelectorAll('.conf-hidden');
+    var btn = document.getElementById('confToggle');
+    hidden.forEach(function(el) {
+      el.style.display = confExpanded ? 'grid' : 'none';
+    });
+    btn.textContent = confExpanded ? 'Show fewer ↑' : 'Show all 14 presentations ↓';
+  }
+
+  // Animated counters on scroll
+  var counted = false;
+  function animateCounters() {
+    if (counted) return;
+    var stats = document.getElementById('statsRow');
+    if (!stats) return;
+    var rect = stats.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 80) {
+      counted = true;
+      var nums = stats.querySelectorAll('.stat-number[data-target]');
+      nums.forEach(function(el) {
+        var target = parseInt(el.getAttribute('data-target'));
+        var suffix = el.getAttribute('data-suffix') || '';
+        var duration = 1200;
+        var start = performance.now();
+        function update(now) {
+          var elapsed = now - start;
+          var progress = Math.min(elapsed / duration, 1);
+          var ease = 1 - Math.pow(1 - progress, 3);
+          var val = Math.round(ease * target);
+          el.textContent = val + suffix;
+          if (progress < 1) requestAnimationFrame(update);
+        }
+        requestAnimationFrame(update);
+      });
+    }
+  }
+  window.addEventListener('scroll', animateCounters);
+  window.addEventListener('load', animateCounters);
+</script>
+</body>
+</html>
